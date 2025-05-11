@@ -1,49 +1,53 @@
-# 📷 WallpaperCLI — загрузка и установка обоев из Konachan
+# WallpaperCLI
 
-**WallpaperCLI** — это консольное приложение на C# под Linux, которое позволяет:
+WallpaperCLI is a C# console application that allows users to download, view, and set wallpapers from the [Konachan](https://konachan.net/) website. It leverages asynchronous methods and HTTP requests to provide an efficient and smooth experience. The app also utilizes external utilities to display images in the terminal and set wallpapers.
 
-- 🔍 Получать превью обоев с Konachan
-- ⬇️ Скачивать изображения в нужную папку
-- 🖼️ Устанавливать изображение как обои рабочего стола (`swww`)
-- 🐈 Работает в `kitty` с поддержкой `icat` для превью
+## Features:
 
----
+- Search for images by tags, limits (count, page), and rating.
+- Download images and save them locally.
+- View images in the console using the `kitty` utility.
+- Set wallpapers using the `swww` utility.
 
-## ⚙️ Зависимости
+## Requirements:
 
-- [.NET 8+](https://dotnet.microsoft.com/)
-- [`kitty`](https://sw.kovidgoyal.net/kitty/) с включённым `kitten icat`
-- [`swww`](https://github.com/LionyxML/swww) (Wayland wallpaper daemon)
-- Linux-дистрибутив с поддержкой Wayland (например, Hyprland)
-- Подключение к интернету
+- **.NET 6.0** or higher
+- Utilities:
+  - `kitty` (to display images in the terminal)
+  - `swww` (to set wallpapers)
 
----
+## Installation:
 
-## 📦 Установка и запуск
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/Kittychan.git
+    ```
 
-1. Клонируй репозиторий:
-```bash
-git clone https://github.com/Devvvmn/WallpaperCLI.git
-cd WallpaperCLI
-dotnet build
-Запусти:
-dotnet run
+2. Navigate to the project directory:
+    ```bash
+    cd Kittychan
+    ```
 
-📁 Структура проекта
-KonachanPost.cs — модель данных изображения
+3. Restore dependencies and build the project:
+    ```bash
+    dotnet build
+    ```
 
-ImageRenderer.cs — логика загрузки, сохранения, отображения, установки
+4. Run the application:
+    ```bash
+    dotnet run
+    ```
 
-Program.cs — точка входа (здесь запускается всё волшебство)
+## Usage:
 
-💡 Планы на будущее
+Once the program is running, it will ask for search parameters such as tags, image count, page number, and rating.
 
- Интерфейс выбора из списка (с превью)
 
- Поддержка других источников
+### Notes:
 
- Кэш изображений
+- The program uses the `kitty` utility to display images in the terminal.
+- The `swww` utility is used to set wallpapers.
 
-🛡️ Лицензия
-MIT😉
+### License:
 
+-MIT License
