@@ -154,7 +154,7 @@ public class WallpaperCLI
                 await imageRenderer.DownloadImageAsync(posts[int.Parse(id)].file_url);
             }
 
-            else if (Console.ReadLine() == "sw")
+            else if (Console.ReadLine() ==  "sw")
             {
                 Console.WriteLine("Номер поста:");
                 string id = Console.ReadLine();

@@ -163,7 +163,7 @@ public class ImageRenderer
 
                 if (!string.IsNullOrWhiteSpace(output))
                 {
-                    Console.WriteLine(output);
+                    Console.WriteLine(output );
                 }
 
                 if (process.ExitCode != 0)
